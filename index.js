@@ -43,11 +43,11 @@ const startServer = async () => {
         await page.waitForNavigation();
        // await page.screenshot({ path: 'example.png' });
         const phoneInput = await page.$x('//*[@id="email"]')
-        const passwordInput = await page.$x('//*[@id="password"]')
+        const passwordInput = await page.$x('//*[@id="password"]');
         const logbtn = await page.$x('/html/body/div[1]/div/div/div/form/button')
         const phoneInputElement = phoneInput[0];
         const passwordInputElement = passwordInput[0];
-
+// ready 
         // Typing into the input fields
         await phoneInputElement.type(email);
         await passwordInputElement.type(password);
