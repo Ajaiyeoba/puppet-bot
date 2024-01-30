@@ -12,7 +12,7 @@ const password = process.env.PASSWORD
 
 const startServer = async () => {
     const browser = await puppeteer.launch({
-        args: [
+        args:[
             "--disable-setuid-sandbox",
             "--no-sandbox",
             "--single-process",
@@ -24,8 +24,6 @@ const startServer = async () => {
     });
 
     try {
-
-
         const page = await browser.newPage()
 
         page.on('console', (msg) => {
@@ -93,7 +91,7 @@ const startServer = async () => {
 }
 app.get('/',(req,res) =>{
     startServer()
-    res.send('Puppeteer is working well')
+    res.send('Puppeteer is alive and well')
 })
 
 server.listen(port, () => {
